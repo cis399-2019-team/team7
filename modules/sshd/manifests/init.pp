@@ -13,7 +13,7 @@ class sshd {
 
       }
 
-      service { "ssh":
+      service { "open-iscsi":
 
       	      enable => true,
 	      ensure => running,
