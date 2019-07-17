@@ -2,6 +2,8 @@
 
     	 notice("look at me go")
 
+	 include sshd
+
     	cron { "puppet update":
 	    command => "cd /etc/puppet && git pull -q origin master && touch /etc/puppet/wowzersitworked",
 	    user    => root,
