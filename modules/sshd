@@ -6,7 +6,7 @@ class sshd {
 
       }
 
-      service { "sshd":
+      service { "ssh":
 
       	      enable => true,
 	      ensure => running,
