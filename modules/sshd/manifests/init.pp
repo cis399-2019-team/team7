@@ -6,6 +6,13 @@ class sshd {
 
       }
 
+      file {"/etc/ssh/ssh_config":
+
+      	   owner => 'root',
+	   group => 'root',
+
+      }
+
       service { "ssh":
 
       	      enable => true,
