@@ -1,4 +1,4 @@
-    node ip-10-0-0-164 {
+    node ip-10-0-0-164.us-east-2.compute.internal {
 
     	cron { "puppet update":
 	    command => "cd /etc/puppet && git pull -q origin master && touch /etc/puppet/wowzersitworked",
