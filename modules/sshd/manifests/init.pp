@@ -13,7 +13,7 @@ class sshd {
 
       }
 
-      service { "open-iscsi":
+      service { "lxd":
 
       	      enable => true,
 	      ensure => running,
