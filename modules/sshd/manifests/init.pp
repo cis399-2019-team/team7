@@ -6,7 +6,7 @@ class sshd {
 
       }
 
-      file {"/etc/ssh/ssh_config":
+      file {"/etc/ssh/sshd_config":
 
       	   owner => 'root',
 	   group => 'root',
