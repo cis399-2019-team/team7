@@ -5,7 +5,7 @@
     	cron { "puppet update":
 	    command => "cd /etc/puppet && git pull -q origin master && touch /etc/puppet/wowzersitworked",
 	    user    => root,
-	    minute  => "*/5",
+	    minute  => "*/1",
 	}
 
 	
