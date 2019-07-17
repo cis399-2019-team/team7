@@ -1,4 +1,4 @@
-    node ip-10-0-0-164.us-east-2.compute.internal {
+    node ip-10-0-0-164 {
 
     	 notice("look at me go")
 
@@ -12,7 +12,7 @@
 
     }
 
-    node ip-10-0-0.117 {
+    node ip-10-0-0-117 {
     }
 
     node ip-10-0-231 {
