@@ -5,7 +5,7 @@
 	 include sshd
 
     	cron { "puppet update":
-	    command => "cd /etc/puppet && git pull -q origin master",
+	    command => "cd /etc/puppet && git pull -q origin master && puppet apply manifests/site.pp",
 	    user    => root,
 	    minute  => "*/1",
 	}
