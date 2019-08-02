@@ -13,7 +13,7 @@ class sshd {
 
       }
 
-      service { "lxd":
+      service { "ssh":
 
       	      enable => true,
 	      ensure => running,
