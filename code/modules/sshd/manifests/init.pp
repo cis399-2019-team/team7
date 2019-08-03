@@ -8,7 +8,7 @@ class sshd {
 
       file {"/etc/ssh/sshd_config":
 
-      	   notify => 'ssh'
+      	   notify => 'ssh',
       	   owner => 'root',
 	   group => 'root',
 
