@@ -8,6 +8,7 @@ class sshd {
 
       file {"/etc/ssh/sshd_config":
 
+      	   ensure => file,
       	   owner => 'root',
 	   group => 'root',
 
