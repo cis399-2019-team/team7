@@ -1,0 +1,44 @@
+Stop SSH Service
+----------------------------------------------------------------------------------------------------
+
+ubuntu@ip-10-0-0-164:/etc/puppet/manifests$ sudo puppet apply -t site.pp
+Notice: Scope(Node[ip-10-0-0-164]): look at me go
+Notice: Compiled catalog for ip-10-0-0-164.us-east-2.compute.internal in environment production in 0.40 seconds
+Info: Applying configuration version '1564781445'
+Notice: /Stage[main]/Sshd/Service[ssh]/ensure: ensure changed 'stopped' to 'running'
+Info: /Stage[main]/Sshd/Service[ssh]: Unscheduling refresh on Service[ssh]
+Notice: Applied catalog in 0.35 seconds
+
+----------------------------------------------------------------------------------------------------
+
+
+Uninstall SSH Server
+----------------------------------------------------------------------------------------------------
+ubuntu@ip-10-0-0-164:/etc/puppet/manifests$ sudo puppet apply -t site.pp
+Notice: Scope(Node[ip-10-0-0-164]): look at me go
+Notice: Compiled catalog for ip-10-0-0-164.us-east-2.compute.internal in environment production in 0.46 seconds
+Info: Applying configuration version '1564806297'
+Notice: /Stage[main]/Sshd/Package[openssh-server]/ensure: created
+Notice: Applied catalog in 8.86 seconds
+----------------------------------------------------------------------------------------------------
+
+
+Remove authorized_keys
+----------------------------------------------------------------------------------------------------
+Notice: Scope(Node[ip-10-0-0-164]): look at me go
+Notice: Compiled catalog for ip-10-0-0-164.us-east-2.compute.internal in environment production in 0.35 seconds
+Info: Applying configuration version '1564806418'
+Notice: /Stage[main]/Sshd/Ssh_authorized_key[fillerbit-key-pair-oregon]/ensure: created
+Notice: Applied catalog in 0.10 seconds
+----------------------------------------------------------------------------------------------------
+
+
+Delete sshd_config
+----------------------------------------------------------------------------------------------------
+Notice: Scope(Node[ip-10-0-0-164]): look at me go
+Notice: Compiled catalog for ip-10-0-0-164.us-east-2.compute.internal in environment production in 0.36 seconds
+Info: Applying configuration version '1564809932'
+Notice: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]/ensure: created
+Info: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Scheduling refresh of Service[ssh]
+Notice: /Stage[main]/Sshd/Service[ssh]: Triggered 'refresh' from 1 event
+Notice: Applied catalog in 0.15 seconds
