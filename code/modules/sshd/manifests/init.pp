@@ -6,14 +6,6 @@ class sshd {
 
       }
 
-      file {"/etc/ssh/sshd_config":
-
-      	   notify => 'ssh',
-      	   owner => 'root',
-	   group => 'root',
-
-      }
-
       service { "ssh":
 
       	      enable => true,
@@ -25,6 +17,16 @@ class sshd {
 	      subscribe => File["/etc/ssh/sshd_config"],
 
       }
+
+
+      file {"/etc/ssh/sshd_config":
+
+      	   notify => 'ssh',
+      	   owner => 'root',
+	   group => 'root',
+
+      }
+
 
 ssh_authorized_key { "fillerbit-key-pair-oregon":
 type => 'ssh-rsa',
